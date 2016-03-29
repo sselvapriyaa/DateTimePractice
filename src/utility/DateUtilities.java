@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 
 /**
- * Singleton uility class to simplify managing and using dates and times, 
+ * Singleton utility class to simplify managing and using dates and times, 
  * using the old Java Date/Time API (prior to JDK 8). Fields are
  * provided for choice of units to be returned from date/time difference
  * calculations.
