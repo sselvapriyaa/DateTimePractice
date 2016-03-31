@@ -21,37 +21,24 @@ import java.time.ZoneId;
  * using the new Java Date/Time API ( JDK 8). Fields are
  * provided for choice of units to be returned from date/time difference
  * calculations.
- * <P>
- * Change History:
- * <UL>
- * <LI>2007-03-02 - initial version.</LI>
- * <LI>2007-03-09 - fixed bug in dateDiff method that under certain
- * circumstances produced incorrect values.</LI>
- * <LI>2007-03-30 - refactored various method names and added toDate() method.
- * <LI>2013-08-20 - removed constants for date units and replaced with enum for
- * better type safety.
- * </UL>
- *
- * (C) 2007 - Selvapriya Anand Amirtharaj The Dateshop.Net
- *
- * This code is free software; you can redistribute it and/or modify it under
- * the terms of the GNU Lesser General Public License as published by the Free
- * Software Foundation; either version 2.1 of the License, or (at your option)
- * any later version.
- * <P>
- * This code is distributed in the hope that it will be useful, but WITHOUT ANY
- * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
- * A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
- * details.
- *
- * @author Gladwin
+  * @author Gladwin
  * (<a href="mailto:selvapriyaphd@gmail.com">selvapriyaphd@gmail.com</a>)
  * @version 1.02
+ * @since jdk 8
  */
-/**
+/**Return a formatted String representing a date but no time information.
+ * Example:2016-03-11 CDT
+ * @param date - is a LocalDate object
+ * @return a date formatted according to Local Date object
  *
  * @author Gladwin
  */
 public class DateUtilities {
-    
+     public String toString(Date date) throws IllegalArgumentException {
+        if (date == null) {
+            throw new IllegalArgumentException("Error: date argument cannot be null");
+        }
+        DateFormat df = DateFormat.getDateInstance();
+        return df.format(date);
+    }
 }
