@@ -30,8 +30,8 @@ public class JDK8DateUtility {
         //System.out.println(jdk8.DateDifference());
         //String dateDiff =jdk8.DifferenceBetweenTwoDates();
         //System.out.println(dateDiff);
-        String dateDuration  =jdk8.DifferenceBetweenTwoDatesDuration();
-        System.out.println(dateDuration );
+        String dateDifference  =jdk8.DifferenceBetweenTwoDates();
+        System.out.println(dateDifference );
         
     }
     
@@ -115,7 +115,7 @@ public class JDK8DateUtility {
      * 
      * @return dateDuration
      */
-    public String DifferenceBetweenTwoDatesDuration()
+    public String DifferenceBetweenTwoDates()
  {
      LocalDateTime dateTime = LocalDateTime.of(1988, 7, 4, 0, 0);
      LocalDateTime dateTime2 = LocalDateTime.now();
@@ -127,10 +127,10 @@ public class JDK8DateUtility {
      long Days = ChronoUnit.DAYS.between(dateTime, dateTime2);
      long Months = ChronoUnit.MONTHS.between(dateTime, dateTime2);
      long Years = ChronoUnit.YEARS.between(dateTime, dateTime2);
-     String dateDuration = "Nano: " + Nano + ", Seconds: " + Seconds 
+     String dateDifference = "Nano: " + Nano + ", Seconds: " + Seconds 
               + ",Milli :" + Milli +",Minutes:" +Minutes +" ,Hours:" + Hours
              + ",Days:" +Days +",Months:"+Months +",Years" +Years;
-     return dateDuration;
+     return dateDifference;
     
  }
 }
